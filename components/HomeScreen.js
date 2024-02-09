@@ -1,17 +1,29 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
+import SearchBar from './SearchBar';
 
-
-export default function DetailScreen(){
+export default function HomeScreen({ navigation }){
     return (
-        <View style={{
-            flex:1,
-            color:'red',
-            justifyContent: 'center',
-            alignItems: 'center',
-        }}>
-        <Text>Hello World !</Text>
-        <StatusBar style="auto" />
+        <View style={styles.container}>
+            <SearchBar navigation={navigation} />
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+      alignItems: "center",
+      justifyContent: "center",
+      padding: 24,
+    },
+    paragraph: {
+      margin: 24,
+      marginTop: 0,
+      fontSize: 14,
+      fontWeight: "bold",
+      textAlign: "center",
+    },
+    logo: {
+      height: 128,
+      width: 128,
+    },
+  });
